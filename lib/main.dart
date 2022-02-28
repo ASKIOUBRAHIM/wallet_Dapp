@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:noob_wallet/Screens/Home/home_dash.dart';
+import 'package:noob_wallet/Screens/Home/container.dart';
 import 'package:noob_wallet/constants.dart';
-import 'Screens/Welcome/welcome.dart';
+//import 'Screens/Welcome/welcome.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: pColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: WelcomeScreen(),
+      home: homePage(),
     );
   }
 }

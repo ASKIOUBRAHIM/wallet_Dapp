@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:noob_wallet/Screens/Home/body_home.dart';
+import 'package:noob_wallet/Screens/Home/container.dart';
+//import 'package:noob_wallet/Screens/Home/body_home.dart';
 
 
 class homePage extends StatefulWidget {
@@ -12,7 +13,7 @@ class _homePageState extends State<homePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff19282F),
+        backgroundColor: Color(0xff533E85),
         title: const Text("Balance"),
         centerTitle: true,
        leading: IconButton(
@@ -26,26 +27,28 @@ class _homePageState extends State<homePage> {
         ),
       ],
       ),
-    body:body_home(),
+      body: Home(),
     bottomNavigationBar: BottomNavigationBar(
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home' ,
-          backgroundColor: Colors.blue ,
+          backgroundColor: Color(0xff533E85),
           ),
           
         BottomNavigationBarItem(
           icon: Icon(Icons.alarm),
-          label: 'history' ,
-          backgroundColor: Colors.yellow ,
+          label: 'prediction' ,
+          ),
+           BottomNavigationBarItem(
+          icon: Icon(Icons.info),
+          label: 'prediction' ,
           ),
           
         BottomNavigationBarItem(
           icon: Icon(Icons.settings),
           label: 'settings' ,
-          backgroundColor: Colors.red ,
-          ),
+         ),
       ],),
      
     );
