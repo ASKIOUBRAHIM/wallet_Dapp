@@ -72,7 +72,8 @@ class CoinCard extends StatelessWidget {
                 ),
               ),
             ),
-            // kayn mouchqil hena 
+            //kayn mochqil hena 
+            Expanded(
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
