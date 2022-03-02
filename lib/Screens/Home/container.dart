@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:noob_wallet/Screens/Home/coinCard.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
 import 'coinModel.dart';
 
 class Home extends StatefulWidget {
@@ -15,7 +14,6 @@ class _HomeState extends State<Home> {
   Future<List<Coin>> fetchCoin() async {
     coinList = [];
     // hena kayn api menin kanjibo data 
-    
     final response = await http.get(Uri.parse(
         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'));
 
@@ -46,7 +44,7 @@ class _HomeState extends State<Home> {
     Timer.periodic(Duration(seconds: 5), (timer) => fetchCoin());
     super.initState();
   }
-
+  // hena kayn l'user interface 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,6 +52,8 @@ class _HomeState extends State<Home> {
         
         body: ListView.builder(
           //scrollDirection: Axis.vertical,
+          //item count kander feha lenght dyale les coins li kaynin 
+          // wela kander le nombre li bghit  
           itemCount: coinList.length,
           itemBuilder: (context, index) {
             return CoinCard(

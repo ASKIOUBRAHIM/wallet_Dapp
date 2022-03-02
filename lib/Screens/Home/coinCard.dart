@@ -9,7 +9,7 @@ class CoinCard extends StatelessWidget {
     @required this.change=0,
     @required this.changePercentage=0,
   });
-
+  // declaration de proprietes dyale lcoin 
   String name;
   String symbol;
   String imageUrl;
@@ -72,7 +72,7 @@ class CoinCard extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(
+            // kayn mouchqil hena 
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
